@@ -60,3 +60,23 @@ Returns an array of strings containing any string beginning with ```query```.
 Trie:Size(): number
 ```
 Returns the number of words that the tree contains.
+
+## Example use:
+
+```lua
+local myTrie = Trie.new()
+print(myTrie:Size())            -- 0
+myTrie:Insert("cat")
+myTrie:Insert("cow")
+myTrie:Insert("foo")
+myTrie:Insert("bar")
+myTrie:Insert("baz")
+print(myTrie:Size())            -- 5
+print(myTrie:GetWords())        -- {"baz", "bar", "cat", "cow", "foo"}
+myTrie:Remove("cat")
+print(myTrie:GetWords())        -- {"baz", "bar", "cow", "foo"}
+print(myTrie:GetWords("b"))     --{"baz", bar"}
+print(myTrie:HasWord("co"))     -- false
+print(myTrie:HasPrefix("co"))   -- true
+
+```
