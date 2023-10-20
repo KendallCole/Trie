@@ -1,7 +1,7 @@
 
 
-# Trie / Prefix Tree
-Trie / prefix tree implementation intended for ROBLOX development. Examples of use could be increasing text search speeds, predictive text, approximate string matching etc.
+# Luau Trie / Prefix Tree
+Trie / prefix tree implementation intended for ROBLOX luau development. Examples of use could be increasing text search speeds, predictive text, approximate string matching etc.
 
 Note that this implementation is case sensitive.
 
