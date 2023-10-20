@@ -1,5 +1,23 @@
+
+
 # Trie / Prefix Tree
-Trie / prefix tree implementation intended for ROBLOX development. Examples of use could be increasing 
+Trie / prefix tree implementation intended for ROBLOX development. Examples of use could be increasing text search speeds, predictive text, approximate string matching etc.
+
+Note that this implementation is case sensitive.
+
+## Types
+```lua
+type Trie = typeof(setmetatable({}, {})) & {
+    Root: Node,
+    _Size: number,
+}
+```
+```lua
+type Node = {
+    children: {string: Node},
+    isWord: boolean,
+}
+```
 
 ## Constructor
 ```lua
@@ -38,7 +56,7 @@ Trie:GetWords(query: string): {string}
 
 Returns an array of strings containing any string beginning with ```query```.
 
-```
+```lua
 Trie:Size(): number
 ```
 Returns the number of words that the tree contains.

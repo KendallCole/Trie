@@ -2,9 +2,6 @@
 local Trie = {}
 Trie.__index = Trie
 
-
-
-
 --[Node Class]--
 type Node = {
     children: {string: Node},
@@ -128,7 +125,8 @@ function GetPrefix(curNode, word: string): (boolean, Node)
     return true, curNode
 end
 
-function GetWordsFromNode(prefix: string, node: Node, wordArr)
+--Recursivley passes a string to appened to and a table to add the word to for returning
+function GetWordsFromNode(prefix: string, node: Node, wordArr): {string}
     if node == nil then return wordArr end
     wordArr = wordArr or {}
     for k, v in pairs(node.children) do
