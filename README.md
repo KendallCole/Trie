@@ -75,7 +75,7 @@ print(myTrie:Size())            -- 5
 print(myTrie:GetWords())        -- {"baz", "bar", "cat", "cow", "foo"}
 myTrie:Remove("cat")
 print(myTrie:GetWords())        -- {"baz", "bar", "cow", "foo"}
-print(myTrie:GetWords("b"))     -- {"baz", bar"}
+print(myTrie:GetWords("b"))     -- {"baz", "bar"}
 print(myTrie:HasWord("co"))     -- false
 print(myTrie:HasPrefix("co"))   -- true
 
