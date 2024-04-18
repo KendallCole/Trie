@@ -19,7 +19,7 @@ return function()
             expect(trie:HasWord("bar")).to.equal(true)
         end)
 
-        it("Should not have the prefix 'ba'", function()
+        it("Should have the prefix 'ba'", function()
             expect(trie:HasPrefix("ba")).to.equal(true)
         end)
 
